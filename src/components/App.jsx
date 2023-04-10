@@ -21,11 +21,9 @@ import { teamMembers } from 'teamMembers';
 import { Profile } from './Profile';
 
 const createProfile = member => {
-  //console.log(member);
   return (<Profile info={member} />);
 };
 
 export const App = () => {
-  //console.log(teamMembers);
-  return <ul class="team list">{teamMembers.map(createProfile)}</ul>;
+  return <ul key="ul-id" class="team list">{teamMembers.map(createProfile)}</ul>;
 };

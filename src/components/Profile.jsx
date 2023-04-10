@@ -1,7 +1,6 @@
 import { Socials } from './Socials';
 
 export const Profile = ({ info: { id, image, name, position, socials } }) => {
-  console.log("id", id);
   return (
     <li key={id} class="item" data-id={id}>
       <img src={image} alt={name} width="270" height="260" class="images" />
