@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { App } from 'components/App';
 import './index.css';
 
