@@ -15,18 +15,18 @@
 //   );
 // };
 
-import user from '../data/user.json';
-import { Description } from 'components/Description/Description';
-import { Stats } from 'components/Stats/Stats';
-import { Items } from 'components/Items/Items';
+import user from '../../data/user.json';
+import { Profile } from 'components/Profile/Profile';
 
 export const App = () => {
   return (
-    <div className="profile">
-      <Description />
-      <Stats>
-        <Items />
-      </Stats>
-    </div>
+    <Profile
+      key={user.tag}
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats}
+    />
   );
 };

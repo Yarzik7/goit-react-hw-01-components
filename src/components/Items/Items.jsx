@@ -1,8 +1,9 @@
-export const Items = () => {
+
+export const Items = ({ props }) => {
     return (
       <li>
-        <span className="label">Followers</span>
-        <span className="quantity">1000</span>
+        <span className="label">{props[0]}</span>
+        <span className="quantity">{props[1]}</span>
       </li>
     );
 } 
