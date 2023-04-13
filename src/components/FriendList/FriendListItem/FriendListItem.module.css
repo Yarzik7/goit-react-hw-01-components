@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  column-gap: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.status {
+    display: block;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+}
+
+.statusRed {
+    background-color: #EB0000;
+}
+
+.statusGreen {
+    background-color: #21EE00;
+}
+
+.avatar {
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+}
