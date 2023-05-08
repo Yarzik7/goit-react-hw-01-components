@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import { StatisticsContainer, Title, StatList, StatListItem } from './Statistics.styled';
+import {
+  StatisticsContainer,
+  Title,
+  StatList,
+  StatListItem,
+} from './Statistics.styled';
 import { StatisticsCaption } from 'components/Profile/Profile.styled';
 
 const marcup = ({ id, label, percentage }) => (

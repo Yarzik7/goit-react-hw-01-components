@@ -1,27 +1,32 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
+import {
+  TransactionHistoryTable,
+  TableHeadRow,
+  TableTuple,
+  TableData,
+} from './TransactionHistory.styled';
 
 const marcupTuple = ({ id, type, amount, currency }) => (
-  <tr key={id} className={css.tableTuple}>
-    <td className={css.tableData}>{type}</td>
-    <td className={css.tableData}>{amount}</td>
-    <td className={css.tableData}>{currency}</td>
-  </tr>
+  <TableTuple key={id}>
+    <TableData>{type}</TableData>
+    <TableData>{amount}</TableData>
+    <TableData>{currency}</TableData>
+  </TableTuple>
 );
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className={css.transactionHistory}>
+    <TransactionHistoryTable>
       <thead>
-        <tr className={css.tableHeadRow}>
-          <th className={css.tableData}>Type</th>
-          <th className={css.tableData}>Amount</th>
-          <th className={css.tableData}>Currency</th>
-        </tr>
+        <TableHeadRow>
+          <TableData>Type</TableData>
+          <TableData>Amount</TableData>
+          <TableData>Currency</TableData>
+        </TableHeadRow>
       </thead>
 
       <tbody>{items.map(marcupTuple)}</tbody>
-    </table>
+    </TransactionHistoryTable>
   );
 };
 
