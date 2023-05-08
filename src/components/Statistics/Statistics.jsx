@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
+import { StatisticsContainer, Title, StatList, StatListItem } from './Statistics.styled';
+import { StatisticsCaption } from 'components/Profile/Profile.styled';
 
 const marcup = ({ id, label, percentage }) => (
-  <li key={id} className={`${css.item} ${css[label.slice(1)]}`} >
-    <span className={css.label}>{label}</span>
-    <span className={css.percentage}>{`${percentage}%`}</span>
-  </li>
+  <StatListItem key={id} label={label}>
+    <StatisticsCaption>{label}</StatisticsCaption>
+    <StatisticsCaption>{`${percentage}%`}</StatisticsCaption>
+  </StatListItem>
 );
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+    <StatisticsContainer>
+      <Title>{title}</Title>
 
-      <ul className={css.statList}>{stats.map(marcup)}</ul>
-    </section>
+      <StatList>{stats.map(marcup)}</StatList>
+    </StatisticsContainer>
   );
 };
 

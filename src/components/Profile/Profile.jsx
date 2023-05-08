@@ -1,38 +1,42 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+import {
+  ProfileContainer,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  StatsItem,
+  StatisticsCaption,
+} from './Profile.styled';
 
 export const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img
-          src={avatar}
-          alt={username}
-          className={css.avatar}
-          width="100"
-          height="100"
-        />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileContainer>
+      <Description>
+        <Avatar src={avatar} alt={username} width="100" height="100" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsItem>
+          <StatisticsCaption>Followers</StatisticsCaption>
+          <StatisticsCaption>{stats.followers}</StatisticsCaption>
+        </StatsItem>
+        <StatsItem>
+          <StatisticsCaption>Views</StatisticsCaption>
+          <StatisticsCaption>{stats.views}</StatisticsCaption>
+        </StatsItem>
+        <StatsItem>
+          <StatisticsCaption>Likes</StatisticsCaption>
+          <StatisticsCaption>{stats.likes}</StatisticsCaption>
+        </StatsItem>
+      </Stats>
+    </ProfileContainer>
   );
 };
 
