@@ -50,7 +50,7 @@ const StatsList = styled.ul`
 `;
 
 const StatsListItem = styled.li`
-  padding: 20px;
+  padding: 15px 0;
   flex-basis: calc((100% - 2 * 0px) / 3);
 
   &:not(:last-child) {
