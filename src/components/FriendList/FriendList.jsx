@@ -12,7 +12,7 @@ export const FriendList = ({ friends }) => {
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,
