@@ -43,13 +43,13 @@ const Location = styled.p`
   color: #686662;
 `
 
-const Stats = styled.ul`
+const StatsList = styled.ul`
   display: flex;
 
   border-top: 1px solid #000;
-`
+`;
 
-const StatsItem = styled.li`
+const StatsListItem = styled.li`
   padding: 20px;
   flex-basis: calc((100% - 2 * 0px) / 3);
 
@@ -58,7 +58,7 @@ const StatsItem = styled.li`
   }
 `;
 
-const StatisticsCaption = styled.span`
+const StatsCaption = styled.span`
   display: block;
 `;
 
@@ -70,7 +70,7 @@ export {
   Name,
   Tag,
   Location,
-  Stats,
-  StatsItem,
-  StatisticsCaption,
+  StatsList,
+  StatsListItem,
+  StatsCaption,
 };

@@ -5,19 +5,25 @@ import {
   StatList,
   StatListItem,
 } from './Statistics.styled';
-import { StatisticsCaption } from 'components/Profile/Profile.styled';
+import { StatsCaption } from 'components/Profile/Profile.styled';
+
+const getRandomHexColor = () => {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
 const marcup = ({ id, label, percentage }) => (
-  <StatListItem key={id} label={label}>
-    <StatisticsCaption>{label}</StatisticsCaption>
-    <StatisticsCaption>{`${percentage}%`}</StatisticsCaption>
+  <StatListItem key={id} label={label} style={{backgroundColor: getRandomHexColor()}}>
+    <StatsCaption>{label}</StatsCaption>
+    <StatsCaption>{`${percentage}%`}</StatsCaption>
   </StatListItem>
 );
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title = '', stats }) => {
   return (
     <StatisticsContainer>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatList>{stats.map(marcup)}</StatList>
     </StatisticsContainer>
@@ -25,7 +31,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,

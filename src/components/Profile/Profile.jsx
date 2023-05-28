@@ -6,9 +6,9 @@ import {
   Name,
   Tag,
   Location,
-  Stats,
-  StatsItem,
-  StatisticsCaption,
+  StatsList,
+  StatsListItem,
+  StatsCaption,
 } from './Profile.styled';
 
 export const Profile = props => {
@@ -22,20 +22,20 @@ export const Profile = props => {
         <Location>{location}</Location>
       </Description>
 
-      <Stats>
-        <StatsItem>
-          <StatisticsCaption>Followers</StatisticsCaption>
-          <StatisticsCaption>{stats.followers}</StatisticsCaption>
-        </StatsItem>
-        <StatsItem>
-          <StatisticsCaption>Views</StatisticsCaption>
-          <StatisticsCaption>{stats.views}</StatisticsCaption>
-        </StatsItem>
-        <StatsItem>
-          <StatisticsCaption>Likes</StatisticsCaption>
-          <StatisticsCaption>{stats.likes}</StatisticsCaption>
-        </StatsItem>
-      </Stats>
+      <StatsList>
+        <StatsListItem>
+          <StatsCaption>Followers</StatsCaption>
+          <StatsCaption>{stats.followers}</StatsCaption>
+        </StatsListItem>
+        <StatsListItem>
+          <StatsCaption>Views</StatsCaption>
+          <StatsCaption>{stats.views}</StatsCaption>
+        </StatsListItem>
+        <StatsListItem>
+          <StatsCaption>Likes</StatsCaption>
+          <StatsCaption>{stats.likes}</StatsCaption>
+        </StatsListItem>
+      </StatsList>
     </ProfileContainer>
   );
 };

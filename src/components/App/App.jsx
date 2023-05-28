@@ -11,7 +11,7 @@ import { TransactionHistory } from 'components/TransactionHistory/TransactionHis
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Section title="Task 1">
         <Container>
           <Profile
@@ -28,6 +28,7 @@ export const App = () => {
       <Section title="Task 2">
         <Container>
           <Statistics title="Upload stats" stats={data} />
+          <Statistics stats={data} />
         </Container>
       </Section>
 
@@ -42,6 +43,6 @@ export const App = () => {
           <TransactionHistory items={transactions} />
         </Container>
       </Section>
-    </div>
+    </>
   );
 };
