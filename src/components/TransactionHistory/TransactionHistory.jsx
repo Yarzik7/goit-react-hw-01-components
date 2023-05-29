@@ -4,6 +4,7 @@ import {
   TableHeadRow,
   TableTuple,
   TableData,
+  TableHeadData,
 } from './TransactionHistory.styled';
 
 const marcupTuple = ({ id, type, amount, currency }) => (
@@ -19,9 +20,9 @@ export const TransactionHistory = ({ items }) => {
     <TransactionHistoryTable>
       <thead>
         <TableHeadRow>
-          <TableData>Type</TableData>
-          <TableData>Amount</TableData>
-          <TableData>Currency</TableData>
+          <TableHeadData>Type</TableHeadData>
+          <TableHeadData>Amount</TableHeadData>
+          <TableHeadData>Currency</TableHeadData>
         </TableHeadRow>
       </thead>
 

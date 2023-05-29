@@ -18,6 +18,8 @@ const Description = styled.div`
 const Avatar = styled.img`
   margin: 0 auto;
   margin-bottom: 20px;
+
+  border: 1px solid #000;
   border-radius: 50%;
 `;
 

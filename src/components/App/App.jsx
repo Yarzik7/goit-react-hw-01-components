@@ -15,7 +15,6 @@ export const App = () => {
       <Section title="Task 1">
         <Container>
           <Profile
-            key={user.tag}
             username={user.username}
             tag={user.tag}
             location={user.location}
